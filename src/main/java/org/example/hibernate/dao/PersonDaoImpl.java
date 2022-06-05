@@ -32,8 +32,7 @@ public class PersonDaoImpl implements PersonDao {
     @Override
     public List<Person> list() {
         Session session = this.sessionFactory.openSession();
-//        List<Person> personList = session.createQuery("from Person").list();
-        List<Person> personList = session.createQuery("select p from Perosn p").list();
+        List<Person> personList = session.createQuery("from Person").list();
         session.close();
         return personList;
 

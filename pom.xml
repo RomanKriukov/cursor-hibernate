@@ -68,6 +68,14 @@
       <artifactId>mssql-jdbc</artifactId>
       <version>${mysql.version}</version>
     </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+    <dependency>
+      <groupId>org.postgresql</groupId>
+      <artifactId>postgresql</artifactId>
+      <version>42.3.6</version>
+    </dependency>
+
   </dependencies>
 
 </project>
