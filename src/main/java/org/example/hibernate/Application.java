@@ -3,7 +3,6 @@ package org.example.hibernate;
 import java.util.List;
 
 import org.example.hibernate.dao.PersonDao;
-import org.example.hibernate.dao.PersonDaoImpl;
 import org.example.hibernate.dmo.Person;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -14,7 +13,7 @@ public class Application {
 
         ApplicationContext context = new AnnotationConfigApplicationContext("org.example.hibernate");
 
-        PersonDao personDAO = context.getBean("personDaoImpl", PersonDaoImpl.class);
+        PersonDao personDAO = context.getBean("personDaoImpl", PersonDao.class);
 
         Person person = getPerson("Pankaj", "India");
         personDAO.save(person);
