@@ -16,17 +16,17 @@ public class Application {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(
                 ApplicationConfiguration.class);
 
-//        EmployeeService employeeService = context.getBean(EmployeeService.class);
+        EmployeeService employeeService = context.getBean(EmployeeService.class);
 
-//        employeeService.save(new Employee("Sunil", "Bora", "suni.bora@example.com"));
-//        employeeService.save(new Employee("David", "Miller", "david.miller@example.com"));
-//        employeeService.save(new Employee("Sameer", "Singh", "sameer.singh@example.com"));
-//        employeeService.save(new Employee("Paul", "Smith", "paul.smith@example.com"));
+        employeeService.save(new Employee("Sunil", "Bora", "suni.bora@example.com"));
+        employeeService.save(new Employee("David", "Miller", "david.miller@example.com"));
+        employeeService.save(new Employee("Sameer", "Singh", "sameer.singh@example.com"));
+        employeeService.save(new Employee("Paul", "Smith", "paul.smith@example.com"));
 
-//        List<Employee> employees = employeeService.getAll();
-//        for (Employee employee : employees) {
-//            System.out.println(employee);
-//        }
+        List<Employee> employees = employeeService.getAll();
+        for (Employee employee : employees) {
+            System.out.println(employee);
+        }
 
         Topic topic = new Topic();
         topic.setTitle("TEST TITLE");
